@@ -1,0 +1,25 @@
+{
+    "name": "Filter your YouTube",
+    "description": "Set filters to obtain full contol over your YouTube recommendations",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+    },
+    "permissions": [],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "/images/ytfilter16.png",
+        "32": "/images/ytfilter32.png",
+        "48": "/images/ytfilter48.png",
+        "128": "/images/ytfilter128.png"
+      }
+    },
+    "icons": {
+      "16": "/images/ytfilter16.png",
+      "32": "/images/ytfilter32.png",
+      "48": "/images/ytfilter48.png",
+      "128": "/images/ytfilter128.png"
+    },
+    "options_page": "options.html"
+  }
