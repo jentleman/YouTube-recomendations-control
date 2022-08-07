@@ -14,9 +14,6 @@
     ],
     "permissions": ["storage", "tabs"],
     "host_permissions": ["https://*.youtube.com/*", "https://youtube.googleapis.com/*"],
-    "content_security_policy": {
-      "extension_page": "script-src 'self' https://apis.google.com/js/api.js; object-src 'self'"
-    },
     "action": {
       "default_popup": "popup.html",
       "default_icon": {
