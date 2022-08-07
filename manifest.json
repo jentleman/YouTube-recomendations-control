@@ -4,9 +4,16 @@
     "version": "1.0",
     "manifest_version": 3,
     "background": {
+      "service_worker": "/js/background.js"
     },
-    "permissions": ["storage"],
-    "host_permissions": ["https://youtube.com/*"]
+    "content_scripts": [
+      {
+        "matches": ["https://*.youtube.com/*"],
+        "js": ["/js/contentscript.js"]
+      }
+    ],
+    "permissions": ["storage", "tabs"],
+    "host_permissions": ["https://*.youtube.com/*", "https://youtube.googleapis.com/*"],
     "action": {
       "default_popup": "popup.html",
       "default_icon": {
