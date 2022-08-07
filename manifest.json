@@ -4,9 +4,19 @@
     "version": "1.0",
     "manifest_version": 3,
     "background": {
+      "service_worker": "/js/background.js"
     },
-    "permissions": ["storage"],
-    "host_permissions": ["https://youtube.com/*"]
+    "content_scripts": [
+      {
+        "matches": ["https://*.youtube.com/*"],
+        "js": ["/js/contentscript.js"]
+      }
+    ],
+    "permissions": ["storage", "tabs"],
+    "host_permissions": ["https://*.youtube.com/*", "https://youtube.googleapis.com/*"],
+    "content_security_policy": {
+      "extension_page": "script-src 'self' https://apis.google.com/js/api.js; object-src 'self'"
+    },
     "action": {
       "default_popup": "popup.html",
       "default_icon": {
